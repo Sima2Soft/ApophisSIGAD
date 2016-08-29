@@ -1,0 +1,28 @@
+{     
+  "version": "1.0.0",  
+  "packOptions": {
+    "summary": "O e-PMG foi desenvolvido com base no Padrão Dublin Core (DC) do Dublin Core Metadata Initiative (DCMI)1 uma organização engajada no desenvolvimento de um padrão de metadados interoperável. O núcleo do DC é um conjunto mínimo de elementos para descrever recursos eletrônicos, composto por quinze elementos principais com as respectivas definições que foram estabelecidas em consenso por um grupo de profissionais interdisciplinar internacional de bibliotecas, arquivos, museus,computação e outros campos do conhecimento.",
+    "owners": [
+      "Luis Gabriel Nascimento Simas"
+    ],
+    "repository": {
+      "type": "git",
+      "url": ""
+    }
+  },
+   "copyright": "2016 - SimaSSoft todos os Direitos Reservados",
+  "buildOptions": {
+    "debugType": "portable"
+  },
+  "dependencies": { },
+  "frameworks": {
+    "netstandard1.6": {
+      "dependencies": {
+        "NETStandard.Library": "1.6.0"
+      }
+    }
+  },
+  "tooling": {
+    "defaultNamespace": "ePmg"
+  }
+}
