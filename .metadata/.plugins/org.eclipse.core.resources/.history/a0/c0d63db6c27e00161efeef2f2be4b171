@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	struct coordenada
+	{
+		int x,y;
+	};
+	coordenada a={-5,2}, b={6,5};
+	cout<<"\nCoordenadas de a("<< a.x<<","<<a.y<<")";
+	cout<<
+	cout<<"\n\n";
+	system("pause");
+	
+}

@@ -1,0 +1,464 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Simassoft.ApophisSigad.Teste</name>
+    </assembly>
+    <members>
+        <member name="T:Teste.ApophisSigad.Dominio.Agregadas.Documento.IEventoDeGestao">
+            <summary>
+            As informações a seguir referem-se a eventos de captura, movimentação e controle do ciclo de vida do documento.    
+            Para cada evento, são apresentados uma definição e os elementos de metadados que o 
+            caracterizam e que devem ser registrados.
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Comum.Anotacao.EventoDeGestaoAttribute.#ctor(System.String,System.String,Teste.ApophisSigad.Dominio.Comum.Anotacao.ValoresDeObrigatoriedade,Teste.ApophisSigad.Dominio.Comum.Anotacao.ValoresDeObrigatoriedade,Teste.ApophisSigad.Dominio.Comum.Anotacao.ValoresDeObrigatoriedade,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="evento">Indicação do evento que deve ser registrado em metadado;</param>
+            <param name="definicaoEElemento">Indica	a definição	do evento e	que	informação deve	ser	registrada em metadados;</param>
+            <param name="aplicaSeAProcessoOuDossie">Aplica-se a: Indica a obrigatoriedade da aplicação do elemento para
+            cada processo/dossiê. Os valores possíveis são: obrigatório(o), obrigatório se aplicável(oA), 
+            facultativo(f)ou não se aplica(NA); </param>
+            <param name="aplicaSeAVolume">Aplica-se a: Indica a obrigatoriedade da aplicação do elemento para
+            cada volume. Os valores possíveis são: obrigatório(o), obrigatório se aplicável(oA), 
+            facultativo(f)ou não se aplica(NA); </param>
+            <param name = "aplicaSeADocumento" > Aplica - se a: Indica a obrigatoriedade da aplicação do elemento para
+            cada documento.Os valores possíveis são: obrigatório(o), obrigatório se aplicável(oA), 
+            facultativo(f)ou não se aplica(NA); </param>
+            <param name="requisito">Os requisitos funcionais relacionados com o elemento de metadado.</param>
+        </member>
+        <member name="T:Teste.ApophisSigad.Dominio.Comum.Anotacao.ValoresDeObrigatoriedade">
+            <summary>
+             Os valores possíveis são: 
+             Obrigatório (o) = 1
+             Obrigatório se aplicável (oA) = 2, 
+             Facultativo(f) = 3,
+             Não se aplica(NA) = 4.    
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Comum.Anotacao.FichaIndividualAttribute.#ctor(System.String,System.String,System.String,Teste.ApophisSigad.Dominio.Comum.Anotacao.ValoresDeObrigatoriedade,Teste.ApophisSigad.Dominio.Comum.Anotacao.ValoresDeObrigatoriedade,Teste.ApophisSigad.Dominio.Comum.Anotacao.ValoresDeObrigatoriedade,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="designacao">Designação: Indicação do nome atribuído ao elemento</param>
+            <param name="definicao">Definição: Indica que informação deve ser registrada no elemento de metadado</param>
+            <param name="objetivo">Objetivo: A referência do que se pretende alcançar com a aplicação do elemento;</param>
+            <param name="aplicaSeAProcessoOuDossie">Aplica-se a: Indica a obrigatoriedade da aplicação do elemento para
+            cada processo/dossiê. Os valores possíveis são: obrigatório(o), obrigatório se aplicável(oA), 
+            facultativo(f)ou não se aplica(NA). </param>
+            <param name="aplicaSeAVolume">Aplica-se a: Indica a obrigatoriedade da aplicação do elemento para
+            cada volume. Os valores possíveis são: obrigatório(o), obrigatório se aplicável(oA), 
+            facultativo(f)ou não se aplica(NA). </param>
+            <param name = "aplicaSeADocumento" > Aplica - se a: Indica a obrigatoriedade da aplicação do elemento para
+            cada documento.Os valores possíveis são: obrigatório(o), obrigatório se aplicável(oA), 
+            facultativo(f)ou não se aplica(NA). </param>
+            <param name="notaDeAplicacao">Nota de aplicação: Sugere formas de aplicação do elemento</param>
+            <param name="exemplos">Exemplos: Apresenta alguns exemplos de aplicação que explicam o elemento</param>
+            <param name="requisitos">Requisito: Os requisitos funcionais relacionados com o elemento de metadado</param>        
+        </member>
+        <member name="T:Teste.ApophisSigad.Dominio.Comum.Enums.GrauDeFormalizacao">
+            <summary>
+            Indicação do grau de formalização do documento:
+            • minuta/rascunho(pré-original): versão preliminar do documento;
+            • original: primeiro documento completo e efetivo;
+            • cópia: resultado da reprodução do documento.
+            </summary>
+        </member>
+        <member name="F:Teste.ApophisSigad.Dominio.Comum.Enums.GrauDeFormalizacao.MinutaOuRascunho">
+            <summary>
+            Minuta/Rascunho(pré-original): versão preliminar do documento;
+            </summary>
+        </member>
+        <member name="F:Teste.ApophisSigad.Dominio.Comum.Enums.GrauDeFormalizacao.Original">
+            <summary>
+            Original: primeiro documento completo e efetivo;
+            </summary>
+        </member>
+        <member name="F:Teste.ApophisSigad.Dominio.Comum.Enums.GrauDeFormalizacao.Copia">
+            <summary>
+            Cópia: resultado da reprodução do documento.
+            </summary>
+        </member>
+        <member name="P:Teste.ApophisSigad.Dominio.Entidades.Autoria.DocumentosCriados">
+            <summary>
+            Documentos Criados por esse autor
+            </summary>
+        </member>
+        <member name="P:Teste.ApophisSigad.Dominio.Entidades.Autoria.UnidadesDeArquivamento">
+            <summary>
+            Dossiês/Pastas/Processos criados por esse Autor
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Autoria.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.Autoria.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Autoria.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="T:Teste.ApophisSigad.Dominio.Entidades.Classe">
+            <summary>
+            Entidade Classe
+            Representa no Mundo Real: Classe
+            
+            Um Plano de Classificação <see cref="P:Teste.ApophisSigad.Dominio.Entidades.Classe.PlanoDeClassificacao" /> é composto por uma hierarquia de Classes,
+            SubClasses<see cref="!:subclasses"/>, Grupos <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Grupo"/>, SubGrupos <see cref="!:subgrupo"/> e tipos
+            de Documentos Arquivísticos <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/> em uma estrutura
+            de árvore, que podem ser identificados por códigos. No contexto do e-ARQ Brasil, a entidade Classe 
+            <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Classe"/> refere-se, de forma genérica, aos níveis citados. Assim, quando um requisito trata de
+            uma classe, estão sendo considerados todos os níveis do Plano de Classificação <see cref="P:Teste.ApophisSigad.Dominio.Entidades.Classe.PlanoDeClassificacao"/>
+            Cada classe pode conter:
+             - Outras Classes a ela subordinadas; ou
+             - Unidades de Arquivamento <see cref="T:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento"/>; e/ou
+             - Documentos Arquivísticos <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/>. 
+             Não são permitidas combinações entre a primeira e as demais opções. Uma classe que tenha outras classes a ela
+             subordinadas não pode conter Unidade de Arquivamento <see cref="T:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento"/>
+             ou Documentos Arquivísticos <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/>, mas 
+             uma classe que não será composta de outras classes a ela subordinadas pode ter Unidade de Arquivamento 
+             <see cref="T:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento"/> e/ou Documento Arquivístico <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/>.
+             Cada classe deve estar relacionada a um Tipo de Classe <see cref="T:Teste.ApophisSigad.Dominio.Entidades.TipoDeClasse"/>.
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Classe.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Classe.GetHashCode">
+            <summary>
+            A hash code is a numeric value that is used to insert and identify an object in a hash-based collection
+            such as the Dictionary(TKey, TValue) class, the Hashtable class,or a type derived from the DictionaryBase class.
+            Two objects that are equal return hash codes that are equal.
+            </summary>
+            <returns>O valor do hash gerado ou 0 para a Classe DocumentoArquivistico</returns>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Classe.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="T:Teste.ApophisSigad.Dominio.Entidades.ComponenteDigital">
+            <summary>
+            Entidade: ComponenteDigital
+            Representa no Mundo Real: É uma cadeia de "bits" (objeto original) distinta que, sozinha ou combinada
+            com outras cadeias de "bits", compõe um Documento Arquivístico <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/> digital.
+            Cada Documento Arquivístico <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/> digital é composto de, pelo menos,
+            um Componente Digital; 
+            Alguns são compostos por vários Componentes Digitais.
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.ComponenteDigital.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.ComponenteDigital.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.ComponenteDigital.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="T:Teste.ApophisSigad.Dominio.Entidades.Documento">
+            <summary>
+            Entidade: Documento
+            Representa no Mundo Real: Documento
+            
+            Unidade registro de informações, qualquer que seja o suporte ou formato
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Documento.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.Documento.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Documento.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico">
+            <summary>
+            Entidade DocumentoArquivistico
+            Representa no Mundo Real: Documento Arquivístico
+            
+            É o Documento <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Documento"/> que foi capturado pelo SIGAD, isto é, declarado como
+            arquivístico e incorporado ao sistema por meio de registro, classificação, arquivamente, etc.
+            Esta é a entidade mais importante de um SIGAD.
+            Um Documento Arquivístico <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/> é originado de um Documento <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Documento"/>
+            simples ou composto, ou seja, formado por um ou vários Documentos <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Documento"/>. Sendo assim, um 
+            Documento Arquivístico <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/> também pode ser simples ou composto. Cada Documento
+            pode, ainda, aparecer em diversos outros Documentos Arquivísticos <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/>.
+            
+            Os Documentos Arquivísticos <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/> são:  
+            - Armazenados em um Volume <see cref="P:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico.Volume"/> de uma Unidade de Arquivamento <see cref="T:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento"/>; ou
+            - Classificados diretamente em alguma Classe <see cref="P:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico.Classe"/>.
+            
+            Desta forma, cada Documento Arquivístico <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/> deve estar relacionado somente
+            a um Volume <see cref="P:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico.Volume"/> de uma Unidade de Arquivamento <see cref="T:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento"/> ou a uma 
+            Classe <see cref="P:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico.Classe"/>
+            </summary>
+        </member>
+        <member name="P:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico.DocumentoId">
+            <summary>
+            Identificador do Documento
+            </summary>
+        </member>
+        <member name="P:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico.NumeroDoDocumento">
+            <summary>
+            Número do Documento
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Grupo.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.Grupo.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Grupo.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="T:Teste.ApophisSigad.Dominio.Entidades.NivelDeAcesso">
+            <summary>
+            Entidade: NivelDeAcesso
+            Representa no Mundo Real: Nível de Acesso ao Documento Arquivístico
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.NivelDeAcesso.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.NivelDeAcesso.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.NivelDeAcesso.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="T:Teste.ApophisSigad.Dominio.Entidades.PlanoDeClassificacao">
+            <summary>
+            Entidade Plano de Classificação
+            Plano de Classificação é um esquema que define uma organização dos documentos, elaborado pelo órgão ou entidade,
+            tipicamente estruturado de forma hierárquica e composto por classes.
+            A gestão de documentos, é feita a partir da aplicação do plano de classificação nos documentos.
+            Sendo assim, o plano de classificação é a espinha dorsal de um SIGAD.
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.PlanoDeClassificacao.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.PlanoDeClassificacao.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.PlanoDeClassificacao.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="T:Teste.ApophisSigad.Dominio.Entidades.TemporalidadeEDestinacao">
+            <summary>
+            Entidade TemporalidadeEDestinacao
+            Representa no Mundo Real: Temporalidade e Destinação
+            
+            Determinam os prazos de guarda previstos nas fases corrente e intermediária, bem como a 
+            destinação final dos documentos <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Documento"/> de uma Classe <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Classe"/>.
+            Cada Classe <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Classe"/>, que permite classificar Unidades de Arquivamento
+            <see cref="T:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento"/> ou Documentos Arquivísticos <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/>,
+            aplicam-se uma Temporalidade e Destinação.
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.TemporalidadeEDestinacao.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.TemporalidadeEDestinacao.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.TemporalidadeEDestinacao.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="T:Teste.ApophisSigad.Dominio.Entidades.TipoDeClasse">
+            <summary>
+            Entidade TipoDeClasse
+            Representa no mundo real: Tipo de Classe
+            
+            Cada um dos níveis de um Plano de Classificação <see cref="T:Teste.ApophisSigad.Dominio.Entidades.PlanoDeClassificacao"/> está representado no diagrama
+            como um tipo de Classe <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Classe"/> (Classe <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Classe"/>, SubClasse, Grupo <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Grupo"/> , Subgrupo e tipo de documento arquivistico
+            <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/>). Cada tipo de Classe <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Classe"/> 
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.TipoDeClasse.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.TipoDeClasse.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.TipoDeClasse.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="T:Teste.ApophisSigad.Dominio.Entidades.TipoDeUnidadeDeArquivamento">
+            <summary>
+            Entidade TipoDeUnidadeDeArquivamento
+            Representa no Mundo Real: Tipo de Unidade de Arquivamento
+            
+            As Unidades de Arquivamento <see cref="T:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento"/> podem ser de três (3) tipos:
+            processo, Dossiê ou pasta.
+            Cada Tipo pode ter várias unidades de Arquivamento a ele relacionadas.
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.TipoDeUnidadeDeArquivamento.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.TipoDeUnidadeDeArquivamento.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.TipoDeUnidadeDeArquivamento.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="T:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento">
+            <summary>
+            Entidade UnidadeDeArquivamento
+            Representa no Mundo Real: Unidade de Arquivamento
+            
+            Uma Unidade de Arquivamento pode ocorrer somente em Classes <see cref="P:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento.Classe"/> que não
+            têm outras Classes <see cref="P:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento.Classe"/> a elas subordinadas, em qualquer nível de hierarquia do
+            Plano de Classificação <see cref="T:Teste.ApophisSigad.Dominio.Entidades.PlanoDeClassificacao"/>. Cada unidade de Arquivamento tem, pelo menos,
+            um Volume <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Volume"/>, que armazena Documentos Arquivísticos <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/>. 
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="T:Teste.ApophisSigad.Dominio.Entidades.Versao">
+            <summary>
+            Entidade: Versão
+            Representa no Mundo Real: Versionamento de Documentos
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Versao.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.Versao.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Versao.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="T:Teste.ApophisSigad.Dominio.Entidades.Volume">
+            <summary>
+            Entidade Volume
+            Representa no Mundo Real: Volume
+            
+            Cada Unidade de Arquivamento <see cref="P:Teste.ApophisSigad.Dominio.Entidades.Volume.UnidadeDeArquivamento"/> é composta por um ou mais Volumes. 
+            Esta prática tem origem nos documentos não digitais <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Documento"/>, de forma a possibilitar que os
+            Volumes tenham tamanho e peso de fácil manejo. No caso dos Documentos Digitais <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Documento"/>, tal
+            prática pode se mostrar aproprieada em situações em que a divisão de volumes faciliete a manipulação
+            das Unidades de Arquivamento <see cref="P:Teste.ApophisSigad.Dominio.Entidades.Volume.UnidadeDeArquivamento"/>, como por exemplo, nas atividades
+            de seleção, transferência etc.
+            Em geral, a maior parte das Unidades de Arquivamento <see cref="P:Teste.ApophisSigad.Dominio.Entidades.Volume.UnidadeDeArquivamento"/> não apresenta
+            mais de um Volume <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Volume"/>. Neste caso, o conceito de Volume <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Volume"/> é transparente
+            para os usuários.
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Volume.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.Volume.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Volume.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+    </members>
+</doc>

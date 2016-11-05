@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Teste.ApophisSigad</name>
+    </assembly>
+    <members>
+        <member name="T:Teste.ApophisSigad.Dominio.Entidades.Classe">
+            <summary>
+            Um <see cref="T:Teste.ApophisSigad.Dominio.Entidades.PlanoDeClassificacao" /> é composto por uma hierarquia de Classes, <see cref="F:Teste.ApophisSigad.Dominio.Entidades.Classe.subclasses"/>,
+            <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Grupo"/>, <see cref="!:subgrupo"/> e tipos de <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/> em uma estrutura
+            de árvore, que podem ser identificados por códigos. No contexto do e-ARQ Brasil, a entidade <see cref="T:Teste.ApophisSigad.Dominio.Entidades.Classe"/>
+            refere-se, de forma genérica, aos níveis citados. Assim, quando um requisito trata de uma classe, estão sendo
+            considerados todos os níveis do <see cref="T:Teste.ApophisSigad.Dominio.Entidades.PlanoDeClassificacao"/>
+            Cada classe pode conter:
+             - outras classes a ela subordinadas; ou
+             - <see cref="T:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento"/>; e/ou
+             - <see cref="T:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico"/>. 
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.ComponenteDigital.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.ComponenteDigital.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.ComponenteDigital.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Documento.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.Documento.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Documento.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.DocumentoArquivistico.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Grupo.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.Grupo.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Grupo.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="T:Teste.ApophisSigad.Dominio.Entidades.PlanoDeClassificacao">
+            <summary>
+            Entidade Plano de Classificação
+            Plano de Classificação é um esquema que define uma organização dos documentos, elaborado pelo órgão ou entidade,
+            tipicamente estruturado de forma hierárquica e composto por classes.
+            A gestão de documentos, é feita a partir da aplicação do plano de classificação nos documentos.
+            Sendo assim, o plano de classificação é a espinha dorsal de um SIGAD.
+            </summary>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.PlanoDeClassificacao.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.PlanoDeClassificacao.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.PlanoDeClassificacao.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.TemporalidadeEDestinacao.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.TemporalidadeEDestinacao.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.TemporalidadeEDestinacao.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.TipoDeClasse.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.TipoDeClasse.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.TipoDeClasse.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.TipoDeUnidadeDeArquivamento.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.TipoDeUnidadeDeArquivamento.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.TipoDeUnidadeDeArquivamento.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.UnidadeDeArquivamento.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Volume.Equals(System.Object)">
+            <summary>
+            Provê igualdade entre classes de mesmo tipo de DocumentoArquivistico
+            </summary>
+            <param name="o">Objeto a ser verificada a igualdade</param>
+            <returns>true => se for igual e false => se for diferente</returns>			
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Teste.ApophisSigad.Dominio.Entidades.Volume.GetHashCode" -->
+        <member name="M:Teste.ApophisSigad.Dominio.Entidades.Volume.ToString">
+            <summary>
+            Mostra a saída formatada dos valores presentes
+            nos atributos de DocumentoArquivistico
+            </summary>
+            <returns>Uma string contendo os valores dos atributos da Classe Incluindo seus relacionamentos</returns>
+        </member>
+    </members>
+</doc>
